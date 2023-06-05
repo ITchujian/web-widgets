@@ -1,4 +1,3 @@
-
 // 创建弹窗元素并添加到文档中
 var popupElement = document.createElement('div');
 popupElement.id = 'popup';

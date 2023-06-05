@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tabs Demo</title>
+  <link rel="stylesheet" type="text/css" href="easy-tabs.css">
+</head>
+<body>
+  <h1>Tabs Demo</h1>
+
+  <div id="tabs-container" class="tabs">
+    <div class="tab">Tab 1</div>
+    <div class="tab">Tab 2</div>
+    <div class="tab">Tab 3</div>
+  </div>
+
+  <div class="tab-content" id="tab-content-1">
+    <h2>Tab 1 Content</h2>
+    <p>This is the content for Tab 1.</p>
+  </div>
+
+  <div class="tab-content" id="tab-content-2">
+    <h2>Tab 2 Content</h2>
+    <p>This is the content for Tab 2.</p>
+  </div>
+
+  <div class="tab-content" id="tab-content-3">
+    <h2>Tab 3 Content</h2>
+    <p>This is the content for Tab 3.</p>
+  </div>
+
+  <script src="easy-tabs.min.js"></script>
+  <!-- ot <script src="easy-tabs.js"></script> -->
+  <script>
+    // 初始化选项卡组件
+    var tabs = new Tabs("tabs-container");
+  </script>
+</body>
+</html>
