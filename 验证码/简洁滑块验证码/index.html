@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Slider Captcha Example</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h2>Slider Captcha Example</h2>
+        <form method="post">
+            {% csrf_token %}
+            <div class="input_title">
+                <label for="username">用户名</label>
+            </div>
+            <input type="text" id="username" name="username" value="{{ username }}" autocomplete="username">
+
+            <div class="input_title">
+                <label for="password">密码</label>
+            </div>
+            <input type="password" id="password" name="password" oncopy="return false" onpaste="return false">
+
+            <div class="input_title">
+                <label>验证码</label>
+            </div>
+            <div id="captcha-container">
+                <div id="verification-success">
+                    验证成功
+                </div>
+                <div id="target-slider"></div>
+                <div id="captcha-slider"></div>
+                <div id="captcha-button">
+                    <span>
+                        <div id="verification-circle"></div>点击此处获取验证码
+                    </span>
+                </div>
+            </div>
+
+            <div class="input_title">
+                <button id="to-register-button" type="button"
+                    onclick="window.location.assign('{% url 'user:register' %}')">前往注册</button>
+                <button id="login-button" type="button">登录</button>
+            </div>
+
+        </form>
+
+    <script src="script.js"></script>
+    <script>
+        initializeSliderCaptcha();
+    </script>
+</body>
+</html>
+
